@@ -15,7 +15,7 @@
 <body class="antialiased bg-gray-100">
 <div class="">
     <x-navbar></x-navbar>
-    <div class="container mx-auto px-10 py-5 h-screen">
+    <div class="max-w-7xl mx-auto px-10 py-5 h-screen">
 
         <div class="text-3xl mb-5 pl-5 font-light">
 	        {{$title}}
