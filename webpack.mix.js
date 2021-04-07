@@ -13,5 +13,16 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        //
+        require("tailwindcss"),
     ]);
+if (mix.inProduction()) {
+    mix.version();
+} else {
+    mix.sourceMaps();
+    mix.options({processCssUrls: false});
+    //mix.extract();
+    mix.browserSync({
+        proxy: process.env.APP_URL,
+        https: process.env.BROWSERSYNC_HTTPS || false
+    });
+}

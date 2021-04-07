@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CompanyController;
+
+use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/companies', [CompanyController::class, 'index'])->name('company-list');
+Route::get('/company/{id}', [CompanyController::class, 'get'])->name('company-detail');
+Route::get('/people', [PersonController::class, 'index'])->name('person-list');
+Route::get('/person/{id}', [PersonController::class, 'get'])->name('person-detail');
+
+
