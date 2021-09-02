@@ -27,7 +27,8 @@
 
         <!-- Profile Update Form -->
         <div class="bg-gray-50 mt-4 p-5 border-t border-gray-200  ">
-        <form class="w-full max-w-sm">
+        <form class="w-full max-w-sm" action="#" method="post">
+            @csrf
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
                     <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="name_first"> First
