@@ -24,4 +24,4 @@ Route::get('/companies', [CompanyController::class, 'index'])->name('company-lis
 Route::get('/companies/{id}', [CompanyController::class, 'get'])->name('company-detail');
 Route::get('/people', [PersonController::class, 'index'])->name('person-list');
 Route::get('/people/{id}', [PersonController::class, 'get'])->name('person-detail');
-
+Route::post('/people/{id}', [PersonController::class, 'update'])->name('person-update');

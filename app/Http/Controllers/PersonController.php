@@ -18,4 +18,16 @@ class PersonController extends Controller
         ];
         return view('person-detail', $data);
     }
+
+    public function update(Request $request, $id){
+        $person = Person::find($id);
+        $person->name_first =  $request->input('name_first');
+        $person->save();
+
+
+        $data = [
+            'person' => $person
+        ];
+        return redirect(route('person-detail', $id));
+    }
 }
