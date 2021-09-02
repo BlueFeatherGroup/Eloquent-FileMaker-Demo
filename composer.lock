@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ec0de9aea7cb043ba396e76e24b5664",
+    "content-hash": "b4cff51f4136101f4a8ddfdd37a246fb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,78 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
+        },
+        {
+            "name": "bluefeather/eloquent-filemaker",
+            "version": "0.0.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BlueFeatherGroup/eloquent-filemaker.git",
+                "reference": "048df3d99bf4a3ffeb708c6aa01a9491fde1d6dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BlueFeatherGroup/eloquent-filemaker/zipball/048df3d99bf4a3ffeb708c6aa01a9491fde1d6dc",
+                "reference": "048df3d99bf4a3ffeb708c6aa01a9491fde1d6dc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^7.3",
+                "illuminate/database": "^7.0 || ^8.0",
+                "illuminate/http": "^7.0 || ^8.0",
+                "illuminate/pagination": "^7.0 || ^8.0",
+                "illuminate/support": "^7.0 || ^8.0",
+                "php": "^7.2.5 || ^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^5.0 || ^6.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BlueFeather\\EloquentFileMaker\\Providers\\FileMakerConnectionServiceProvider"
+                    ],
+                    "aliases": {
+                        "FM": "BlueFeather\\EloquentFileMaker\\Support\\Facades\\FM"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BlueFeather\\EloquentFileMaker\\": "src/",
+                    "Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Nahodyl",
+                    "email": "david@bluefeathergroup.com"
+                }
+            ],
+            "description": "A package for getting FileMaker records as Eloquent models in Laravel",
+            "keywords": [
+                "Blue Feather",
+                "Blue Feather Group",
+                "BlueFeather",
+                "FileMaker",
+                "data api",
+                "database",
+                "eloquent",
+                "laravel",
+                "models"
+            ],
+            "support": {
+                "issues": "https://github.com/BlueFeatherGroup/eloquent-filemaker/issues",
+                "source": "https://github.com/BlueFeatherGroup/eloquent-filemaker/tree/0.0.19"
+            },
+            "time": "2021-06-03T22:22:54+00:00"
         },
         {
             "name": "brick/math",

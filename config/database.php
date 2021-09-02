@@ -34,6 +34,16 @@ return [
     */
 
     'connections' => [
+        'filemaker' => [
+            'driver' => 'filemaker',
+            'host' => env('DB_HOST', 'fms.mycompany.com'),
+            'database' => env('DB_DATABASE', 'MyFileName'),
+            'username' => env('DB_USERNAME', 'myusername'),
+            'password' => env('DB_PASSWORD', ''),
+            'prefix' => env('DB_PREFIX', ''),
+            'version' => env('DB_VERSION', 'vLatest'),
+            'protocol' => env('DB_PROTOCOL', 'https'),
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',

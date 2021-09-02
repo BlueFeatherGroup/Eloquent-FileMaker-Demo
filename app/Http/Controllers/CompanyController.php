@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class CompanyController extends Controller
@@ -13,6 +14,10 @@ class CompanyController extends Controller
     }
 
     public function get($id){
-        return view('company-detail');
+        $company = Company::find($id);
+        $data = [
+            'company' => $company
+        ];
+        return view('company-detail', $data);
     }
 }

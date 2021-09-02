@@ -8,16 +8,16 @@
         <div class="px-40 py-5 sm:px-6 h-40">
             <div class="flex-shrink-0 h-30 w-30 float-left">
                 <img class="h-32 w-32 rounded-full"
-                     src="{{asset('img/david.jpg')}}"
+                     src="{{$person->photo}}"
                      alt="">
             </div>
 
             <div class="ml-36 mt-8">
                 <h3 class="text-lg leading-6 font-medium text-gray-900">
-                    David Nahodyl
+                    {{$person->name_first_last_c}}
                 </h3>
                 <p class="mt-1 max-w-2xl text-sm text-gray-500">
-                    david@bluefeathergroup.com
+                    {{$person->email}}
                 </p>
                 <p class="mt-1 max-w-2xl text-sm text-blue-500">
                     <a href="{{route('company-detail', 1)}}"> Blue Feather</a>
