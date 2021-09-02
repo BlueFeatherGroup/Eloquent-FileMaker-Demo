@@ -10,7 +10,11 @@ class CompanyController extends Controller
     //
 
     public function index(){
-        return view('company-list');
+        $companies = Company::paginate(10);
+        $data = [
+            'companies' => $companies
+        ];
+        return view('company-list', $data);
     }
 
     public function get($id){

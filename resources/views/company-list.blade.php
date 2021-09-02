@@ -3,7 +3,6 @@
 
 
     <div>
-        <!-- This example requires Tailwind CSS v2.0+ -->
         <div class="flex flex-col mb-5">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
@@ -26,31 +25,30 @@
 
                             <!-- START individual row -->
 
+                            @foreach($companies as $company)
                             <tr onclick="window.location='{{route('company-detail', 1)}}';"
                             class="cursor-pointer hover:bg-gray-100">
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <div class="flex items-center">
                                         <div class="ml-4">
                                             <div class="text-sm font-medium text-gray-900">
-                                                Blue Feather
+                                                {{$company->name}}
                                             </div>
                                         </div>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <div class="text-sm text-gray-900 hover:text-blue-500"><a href="https://www.bluefeathergroup.com">bluefeathergroup.com</a></div>
+                                    <div class="text-sm text-gray-900 hover:text-blue-500"><a href="https://{{$company->domain}}">{{$company->domain}}</a></div>
                                 </td>
                             </tr>
-
-
-
                             <!-- END individual row -->
-
+                            @endforeach
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+        {{$companies->links()}}
     </div>
 </x-app>
