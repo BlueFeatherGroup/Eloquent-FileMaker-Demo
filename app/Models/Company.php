@@ -9,4 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Company extends FMModel
 {
     use HasFactory;
+
+    public function staff(){
+        return $this->hasMany(Person::class);
+    }
 }

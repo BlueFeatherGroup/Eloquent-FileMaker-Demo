@@ -20,7 +20,7 @@
                     {{$person->email}}
                 </p>
                 <p class="mt-1 max-w-2xl text-sm text-blue-500">
-                    <a href="{{route('company-detail', $person->id_company)}}"> {{$person->company->name}}</a>
+                    <a href="{{route('company-detail', $person->company_id)}}"> {{$person->company->name}}</a>
                 </p>
             </div>
         </div>
