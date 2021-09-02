@@ -36,7 +36,7 @@
                 <div class="md:w-2/3">
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        name="name-first" type="text" value="David">
+                        name="name-first" type="text" value="{{$person->name_first}}">
                 </div>
             </div>
             <div class="md:flex md:items-center mb-6">
@@ -47,7 +47,7 @@
                 <div class="md:w-2/3">
                     <input
                         class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                        name="name-last" type="text" value="Nahodyl">
+                        name="name-last" type="text" value="{{$person->name_last}}">
                 </div>
             </div>
             <div class="md:flex md:items-center mb-6">
