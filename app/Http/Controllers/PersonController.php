@@ -29,10 +29,6 @@ class PersonController extends Controller
 
         $person->save();
 
-
-        $data = [
-            'person' => $person
-        ];
         return redirect(route('person-detail', $id));
     }
 }
