@@ -22,6 +22,11 @@ class PersonController extends Controller
     public function update(Request $request, $id){
         $person = Person::find($id);
         $person->name_first =  $request->input('name_first');
+        $person->name_last =  $request->input('name_last');
+        $person->email =  $request->input('email');
+        $person->phone =  $request->input('phone');
+        $person->title =  $request->input('title');
+
         $person->save();
 
 
